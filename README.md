@@ -12,7 +12,8 @@ A modern React application built with TypeScript and Vite, following best practi
   - TypeScript for static type checking
 - **Testing**
   - Jest + React Testing Library for unit tests
-  - Code coverage reporting
+  - Code coverage reporting with coverage thresholds
+  - CI integration for test and coverage reporting
 
 ## Getting Started
 
@@ -72,7 +73,26 @@ npm run test:watch
 
 # Run tests with coverage report
 npm run test:coverage
+
+# Run tests with coverage in watch mode
+npm run test:coverage:watch
+
+# Generate coverage report and open it in the browser
+npm run test:coverage:open
 ```
+
+### Code Coverage
+
+This project enforces code coverage thresholds to maintain code quality:
+
+- **70%** for statements, branches, functions, and lines
+
+Coverage reports are generated in multiple formats:
+- HTML: Open `coverage/lcov-report/index.html` in your browser
+- JSON: Available in `coverage/coverage-final.json`
+- lcov: Available in `coverage/lcov.info` (useful for CI integrations)
+
+The GitHub Actions workflow automatically runs tests and uploads coverage reports on each push and pull request.
 
 ## Project Structure
 
