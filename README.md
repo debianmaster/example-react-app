@@ -95,7 +95,6 @@ Coverage reports are generated in multiple formats:
 The GitHub Actions workflow automatically runs tests and uploads coverage reports on each push and pull request.
 
 ## Project Structure
-
 ```
 example-react-app/
 ├── public/             # Static assets
